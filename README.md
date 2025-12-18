@@ -1,6 +1,6 @@
 # Nexels: Neurally-Textured Surfels for Real-Time Novel View Synthesis with Sparse Geometries
 
-[Project Page](https://lessvrong.com/cs/nexels) | [Paper](https://arxiv.org/pdf/2512.13796) | [CUDA Rasterizer](https://github.com/victor-rong/nexels_cuda) | [Custom Dataset (15.7GB)](https://www.dropbox.com/scl/fi/oqwi15avd80e0tt3cvy98/data.zip?rlkey=xcqi1klskg9petiwxs219ylov&st=a6gtrthj&dl=0) <br>
+[Project Page](https://lessvrong.com/cs/nexels) | [Paper](https://arxiv.org/pdf/2512.13796) | [CUDA Rasterizer](https://github.com/victor-rong/diff-nexel-rasterization) | [Custom Dataset (15.7GB)](https://www.dropbox.com/scl/fi/oqwi15avd80e0tt3cvy98/data.zip?rlkey=xcqi1klskg9petiwxs219ylov&st=a6gtrthj&dl=0) <br>
 
 <img src="./assets/teaser.jpg" alt="Teaser figure" width="100%"/>
 
