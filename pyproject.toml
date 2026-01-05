@@ -1,0 +1,64 @@
+[project]
+name = "workspace"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.8,<3.9"
+dependencies = [
+    "cuda-python==11.8.0",
+    "diff-nexel-rasterization",
+    "fpsample>=1.0.1",
+    "fused-ssim",
+    "matplotlib>=3.7.5",
+    "numpy>=1.24.4",
+    "nvidia-htop>=1.2.0",
+    "open3d>=0.18.0",
+    "opencv-python>=4.12.0.88",
+    "pillow>=10.4.0",
+    "plyfile>=1.0.3",
+    "pyyaml>=6.0.3",
+    "scikit-image>=0.21.0",
+    "scikit-learn>=1.3.2",
+    "simple-knn",
+    "tinycudann",
+    "torch>=2.0.0",
+    "torchvision>=0.19.1",
+    "tqdm>=4.67.1",
+    "trimesh>=4.3.2",
+    "typing-extensions>=4.13.2",
+    "wandb>=0.23.1",
+]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.14.10",
+]
+
+[[tool.uv.index]]
+name = "pytorch-cu118"
+url = "https://download.pytorch.org/whl/cu118"
+explicit = true
+
+[tool.uv.extra-build-dependencies]
+diff-nexel-rasterization = ["torch"]
+tinycudann = ["torch"]
+
+[tool.uv.sources]
+torch = [
+  { index = "pytorch-cu118", marker = "sys_platform == 'linux'" },
+]
+torchvision = [
+  { index = "pytorch-cu118", marker = "sys_platform == 'linux'" },
+]
+tinycudann = { git = "https://github.com/NVlabs/tiny-cuda-nn/", subdirectory = "bindings/torch" }
+diff-nexel-rasterization = { workspace = true }
+fused-ssim = { workspace = true }
+simple-knn = { workspace = true }
+
+[tool.uv.workspace]
+members = [
+    "submodules/diff-nexel-rasterization",
+    "submodules/fused-ssim",
+    "submodules/simple-knn",
+]
+
